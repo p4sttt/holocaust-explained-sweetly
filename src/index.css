@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+*::selection {
+  color: #fdf4f5;
+  background: #e8a0bf;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdf4f5;
+  color: #b677c6;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  gap: 32px;
+}
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
