@@ -38,9 +38,9 @@ function App() {
   };
 
   return (
-    <div className='grid-main w-screen h-screen overflow-hidden'>
+    <div className='grid-main h-screen w-screen overflow-hidden'>
       <button
-        className='h-full from-pink-200 bg-gradient-to-r cursor-none'
+        className='h-full cursor-none bg-gradient-to-r from-pink-200'
         onClick={prevParagraph}
         onMouseEnter={setHoverCursor}
         onMouseLeave={setDefaultCursor}
@@ -52,7 +52,7 @@ function App() {
         onDragEnd={setDefaultCursor}
       />
       <button
-        className='h-full from-pink-200 bg-gradient-to-l cursor-none'
+        className='h-full cursor-none bg-gradient-to-l from-pink-200'
         onClick={nextParagraph}
         onMouseEnter={setHoverCursor}
         onMouseLeave={setDefaultCursor}

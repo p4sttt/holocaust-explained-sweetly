@@ -10,7 +10,7 @@ export const PageCounter: FC<PageCounterProps> = ({
   pagesCount,
 }) => {
   return (
-    <p className='absolute left-8 bottom-8'>
+    <p className='absolute bottom-8 left-8'>
       {currentPage} / {pagesCount}
     </p>
   );

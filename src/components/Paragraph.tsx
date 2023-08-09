@@ -56,7 +56,7 @@ export const Paragraph: FC<ParagraphProps> = ({
         drag
         dragElastic={0.1}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        className='max-w-lg m-auto px-10 py-8 border-4 bg-pink-50 border-pink-100 rounded-2xl'
+        className='m-auto max-w-lg rounded-2xl border-4 border-pink-100 bg-pink-50 p-4 text-xs md:px-10 md:py-8 md:text-base'
         {...props}
       >
         <motion.p>{paragraph}</motion.p>
