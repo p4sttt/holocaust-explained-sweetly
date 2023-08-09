@@ -1,19 +1,25 @@
 import {
   AnimatePresence,
   AnimationControls,
+  MotionProps,
   Variants,
   motion,
   useMotionValue,
   useTransform,
 } from 'framer-motion';
-import { FC } from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 
-interface ParagraphProps {
-  paragraph: string;
-  controls: AnimationControls;
-}
+type ParagraphProps = ButtonHTMLAttributes<HTMLDivElement> &
+  MotionProps & {
+    paragraph: string;
+    controls: AnimationControls;
+  };
 
-export const Paragraph: FC<ParagraphProps> = ({ paragraph, controls }) => {
+export const Paragraph: FC<ParagraphProps> = ({
+  paragraph,
+  controls,
+  ...props
+}) => {
   const variants: Variants = {
     visible: {
       opacity: 1,
@@ -51,6 +57,7 @@ export const Paragraph: FC<ParagraphProps> = ({ paragraph, controls }) => {
         dragElastic={0.1}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
         className='max-w-lg m-auto px-10 py-8 border-4 bg-pink-50 border-pink-100 rounded-2xl'
+        {...props}
       >
         <motion.p>{paragraph}</motion.p>
       </motion.div>
